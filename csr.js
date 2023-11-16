@@ -2,9 +2,9 @@
 function createCsr (type) {
   if (!type) return require('CSRBitMap').toCompressedString()
   const arr = []
-
+  const count = Math.floor(Math.random() * (270 - 100 + 1)) + 100
   const allNumbers = Array.from({ length: 43094 - 1 + 1 }, (_, i) => i + 1)
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < count; i++) {
     const randomIndex = Math.floor(Math.random() * allNumbers.length)
     const randomNumber = allNumbers[randomIndex]
     arr.push(randomNumber)
