@@ -33,3 +33,4 @@ createDtsg(1)
 
 [逆向 Facebook 接口 __csr 参数](https://dev-coco.github.io/post/Reverse-Facebook-__csr-Param/)
 
+[逆向 Facebook 接口 fb_dtsg 参数](https://dev-coco.github.io/post/Reverse-Facebook-fb_dtsg-Param/)
