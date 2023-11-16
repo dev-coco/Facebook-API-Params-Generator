@@ -24,7 +24,7 @@ createCsr(1)
 // Original parameters
 createDtsg()
 
-// renew parameters
+// Renew parameters
 createDtsg(1)
 ```
 
