@@ -19,6 +19,15 @@ createCsr()
 createCsr(1)
 ```
 
+## fb_dstg.js
+```JavaScript
+// Original parameters
+createDtsg()
+
+// renew parameters
+createDtsg(1)
+```
+
 # Read More
 [逆向 Facebook 接口 __dyn 参数](https://dev-coco.github.io/post/Reverse-Facebook-__dyn-Param/)
 
