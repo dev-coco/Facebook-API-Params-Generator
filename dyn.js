@@ -1,30 +1,13 @@
-
 function createDyn (type) {
-  const bodyData = document.body.innerHTML.match(/\},([0-9])+\]/gi)
-  const headData = document.head.innerHTML.match(/\},([0-9])+\]/gi)
-  const combinedData = bodyData.concat(headData)
+  if (!type) return require('ServerJSDefine').getLoadedModuleHash()
   const arr = []
-
-  if (type) {
-    // 随机生成 dyn
-    const count = Math.floor(Math.random() * (265 - 115 + 1)) + 115
-    const allNumbers = Array.from({ length: 7331 - 7 + 1 }, (_, i) => i + 7)
-    for (let i = 0; i < count; i++) {
-      const randomIndex = Math.floor(Math.random() * allNumbers.length)
-      const randomNumber = allNumbers[randomIndex]
-      arr.push(randomNumber)
-      allNumbers.splice(randomIndex, 1)
-    }
-  } else {
-    // 当前默认 dyn
-    for (const item in combinedData) {
-      if (combinedData[item] != null) {
-        const extractedNumber = combinedData[item].replace(/\},|]/g, '')
-        if (parseInt(extractedNumber) >= 7) {
-          arr.push(parseInt(extractedNumber))
-        }
-      }
-    }
+  const count = Math.floor(Math.random() * (265 - 115 + 1)) + 115
+  const allNumbers = Array.from({ length: 7331 - 7 + 1 }, (_, i) => i + 7)
+  for (let i = 0; i < count; i++) {
+    const randomIndex = Math.floor(Math.random() * allNumbers.length)
+    const randomNumber = allNumbers[randomIndex]
+    arr.push(randomNumber)
+    allNumbers.splice(randomIndex, 1)
   }
   // 二进制转换文本
   function convertToBinaryString (num) {
